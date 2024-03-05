@@ -7,10 +7,15 @@ fn main() {
     io::stdin().read_line(&mut name).expect("Failed to read input");
 
     // use of match expression to pattern match against variable "name"
-    // trim is used to remove any leading or trailing whitespace
-    match name.trim() {
-        "Good Bye" => println!("Sorry to see you go."),
-        "Hello" => println!("Hi, nice to meet you!"),
+    // Challenge 1: add more greetings
+    // Challenge 2: case insensitive match
+
+    match name.trim().to_lowercase().as_str() {
+        "good afternoon" => println!("Good afternoon to you too!"),
+        "good morning" => println!("Good morning to you too!"),
+        "good bye" => println!("Sorry to see you go."),
+        "hello" => println!("Hi, nice to meet you!"),
+        "whats up" => println!("Not much, you?"),
         _ => println!("I can't find a greeting, good bye."),
     }
 }
