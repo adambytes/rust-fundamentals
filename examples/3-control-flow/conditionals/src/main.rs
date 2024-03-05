@@ -1,5 +1,6 @@
 fn main() {
     let proceed = false;
+    // Difference from JS is that if statements don't require parentheses
     if proceed {
         println!("Proceeding");
     } else {

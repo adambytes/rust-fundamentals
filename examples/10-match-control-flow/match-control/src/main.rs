@@ -3,9 +3,11 @@ use std::io;
 fn main() {
     println!("Please enter a greeting:");
     let mut name = String::new();
+    // read_line returns a Result type, so we use expect to handle the error
     io::stdin().read_line(&mut name).expect("Failed to read input");
 
     // use of match expression to pattern match against variable "name"
+    // trim is used to remove any leading or trailing whitespace
     match name.trim() {
         "Good Bye" => println!("Sorry to see you go."),
         "Hello" => println!("Hi, nice to meet you!"),
